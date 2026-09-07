@@ -1,3 +1,20 @@
 spring:
   application:
     name: finance-bot
+
+  datasource:
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+
+  jpa:
+    hibernate:
+      ddl-auto: validate # Verify that JPA entities match the database schema without modifying it
+
+#  sql:
+#    init:
+#      mode: always # Run schema.sql on every application startup.
+
+telegram:
+  bot:
+    token: ${TELEGRAM_BOT_TOKEN}
