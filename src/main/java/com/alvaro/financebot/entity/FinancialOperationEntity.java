@@ -15,12 +15,15 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+/**
+ * Representa una operación financiera almacenada en la tabla {@code financial_operation}.
+ */
 @Entity
 @Table(name = "financial_operation")
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
-public class FinancialOperation {
+public class FinancialOperationEntity {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -41,5 +44,4 @@ public class FinancialOperation {
 
   @Column(name = "created_at", nullable = false)
   private Instant createdAt;
-
 }
