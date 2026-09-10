@@ -11,9 +11,9 @@ spring:
     hibernate:
       ddl-auto: validate # Verify that JPA entities match the database schema without modifying it
 
-#  sql:
-#    init:
-#      mode: always # Run schema.sql on every application startup.
+  sql:
+    init:
+      mode: always # Ejecuta schema.sql al arrancar para crear las tablas necesarias.
 
 telegram:
   bot:
